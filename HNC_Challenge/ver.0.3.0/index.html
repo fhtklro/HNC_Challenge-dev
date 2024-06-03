@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>HNC Challenge</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- headerArea -->
+    <div class="container" id="headerArea">
+        <div class="row">
+
+            <div class="col-4 d-flex align-items-center justify-content-center">
+                <h1 id="title">HNC Challenge</h1>
+            </div>
+
+            <div class="col-7">
+                <div class="row">
+
+                    <div class="col-2 offset-2 d-flex align-items-center justify-content-center">
+                        <div class="d-flex">
+                            Game Mode
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="row">
+
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                <input class="form-check-input" type="checkbox" value="PrimeFactor" id="PrimeFactor" checked>
+                                </input>
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                PrimeFactor
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-1">
+                        <div class="row">
+
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                <input class="form-check-input" type="checkbox" value="2x" id="2xCheckBox" checked>
+                                </input>
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                x2
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-1">
+                        <div class="row">
+
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                <input class="form-check-input" type="checkbox" value="3x" id="3xCheckBox">
+                                </input>
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                x3
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-1">
+                        <div class="row">
+
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                <input class="form-check-input" type="checkbox" value="5x" id="5xCheckBox">
+                                </input>
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                x5
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-1">
+                        <div class="row">
+
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                <input class="form-check-input" type="checkbox" value="7x" id="7xCheckBox">
+                                </input>
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                x7
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-1">
+                        <div class="row">
+
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                <input class="form-check-input" type="checkbox" value="11x" id="11xCheckBox">
+                                </input>
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                x11
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-1">
+                        <div class="row">
+
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                <input class="form-check-input" type="checkbox" value="13x" id="13xCheckBox">
+                                </input>
+                            </div>
+                            <div class="col-12 d-flex align-items-center justify-content-center">
+                                x13
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-1 d-flex align-items-center justify-content-center">
+                <button class="btn btn-primary form-control" type="button" id="buttonStart">
+                    Start
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- judgeLogArea -->
+    <div class="container" id="judgeLogArea">
+        <div class="row align-items-center">
+            <div class="col-12 ">
+                <div class="tableFrame">
+                    <table class="table tableJudgeLog" >
+                        <thead>
+                            <tr>
+                                <th class="fs-5" id="tableRow0">Hand</th>
+                                <th class="fs-5" id="tableRow1">Equation</th>
+                                <th class="fs-5" id="tableRow2">Judge</th>
+                                <th class="fs-5" id="tableRow3">LapTime</th>
+                                <th class="fs-5" id="tableRow3">TotalTime</th>
+                                <th class="fs-5" id="tableRow4">Correct</th>
+                                <th class="fs-5" id="tableRow5">Incorrect</th>
+                                <th class="fs-5" id="tableRow6">GiveUp</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbodyJudgeLog">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- inputArea -->
+    <div class="container" id="inputArea">
+        <div class="row align-items-center">
+            <div class="col-1" id="hand">
+                <div class="d-flex align-items-center justify-content-center fs-3 localCard ">Hand</div>
+            </div>
+            <div class="col-1" id="hand">
+                <div class="border border-secondary d-flex align-items-center justify-content-center fs-1 localCard" id="localHand0"></div>
+            </div>
+            <div class="col-1" id="hand">
+                <div class="border border-secondary d-flex align-items-center justify-content-center fs-1 localCard" id="localHand1"></div>
+            </div>
+            <div class="col-1" id="hand">
+                <div class="border border-secondary d-flex align-items-center justify-content-center fs-1 localCard" id="localHand2"></div>
+            </div>
+            <div class="col-1" id="hand">
+                <div class="border border-secondary d-flex align-items-center justify-content-center fs-1 localCard" id="localHand3"></div>
+            </div>
+            <div class="col-1" id="hand">
+                <div class="border border-secondary d-flex align-items-center justify-content-center fs-1 localCard" id="localHand4"></div>
+            </div>
+            <div class="col-1" id="hand">
+                <div class="border border-secondary d-flex align-items-center justify-content-center fs-1 localCard" id="localHand5"></div>
+            </div>
+            <div class="col-1" id="hand">
+                <div class="border border-secondary d-flex align-items-center justify-content-center fs-1 localCard" id="localHand6"></div>
+            </div>
+            <div class="col-1" id="hand">
+                <div class="border border-secondary d-flex align-items-center justify-content-center fs-1 localCard" id="localHand7"></div>
+            </div>
+            <div class="col-1" id="hand">
+                <div class="border border-secondary d-flex align-items-center justify-content-center fs-1 localCard" id="localHand8"></div>
+            </div>
+            <div class="col-1" id="hand">
+                <div class="border border-secondary d-flex align-items-center justify-content-center fs-1 localCard" id="localHand9"></div>
+            </div>
+            <div class="col-1" id="hand">
+                <div class="border border-secondary d-flex align-items-center justify-content-center fs-1 localCard" id="localHand10"></div>
+            </div>
+        </div>
+
+        <div class="row localEquation">
+            <div class="col-3 d-flex">
+                <input class="form-control text-center localInput" maxlength="5" disabled id="inputValueC"></input>
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center">
+                <div class="text-center fs-1">=</div>
+            </div>
+            <div class="col-1 d-flex">
+                <input class="form-control text-center localInput" maxlength="1" disabled id="inputValueP"></input>
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-center">
+                <div class="text-center fs-1">×</div>
+            </div>
+            <div class="col-3 d-flex">
+                <input class="form-control text-center localInput" maxlength="5" disabled id="inputValueX"></input>
+            </div>
+            <div class="col-1 d-flex">
+                <button class="btn btn-secondary form-control" type="button" disabled id="buttonReset">Reset</button>
+            </div>
+            <div class="col-1 d-flex">
+                <button class="btn btn-primary form-control" type="button" disabled id="buttonJudge">Judge<br>(Enter)</button>
+            </div>
+            <div class="col-1 d-flex">
+                <button class="btn btn-danger form-control" type="button" disabled id="buttonGiveUp">GiveUp</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- footerArea -->
+    <div class="container" id="footerArea">
+        <div class="row d-flex align-items-center">
+            <div class="col-5" id="title">
+                Original Idea <a href="https://twitter.com/irotirihs/status/1757047519719366997">にばいめーかー</a> by <a href="https://twitter.com/irotirihs">さしみ</a>
+            </div>
+            <div class="col-2 text-center" id="version">
+                ver. 0.3.0(Deprecated)
+            </div>
+            <div class="col-5  text-end" id="credit">
+                Created by <a href="https://twitter.com/prinum2357">Hanabusan</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+
+</body>
+
+</html>
